@@ -10,6 +10,11 @@ WORKDIR $cubes_folder
 
 VOLUME [$cubes_folder]
 
+COPY data.sqlite $cubes_folder
+COPY model.json $cubes_folder
+COPY slicer.ini $cubes_folder
+
+
 EXPOSE 5000
 
 CMD ["sh", "/usr/local/bin/cubes-start"]
